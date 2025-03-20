@@ -142,8 +142,14 @@ gemini_inference_times = []
 # Process the first 20 samples
 for i, x in enumerate(data[:10]):  # Limit to the first 20 samples
     PROMPT = f"""
-    Bạn là một chuyên gia về y học cổ truyền Việt Nam. Hãy trả lời đúng trọng tâm câu hỏi, không cần bổ sung thêm thông tin.
-    Câu hỏi: {x["question"]}
+    Bạn là một chuyên gia có kiến thức sâu rộng và kinh nghiệm thực tiễn trong lĩnh vực y học cổ truyền Việt Nam. Với nền tảng chuyên môn vững chắc, bạn sẽ cung cấp câu trả lời chính xác, súc tích và đi thẳng vào trọng tâm của câu hỏi được đưa ra.
+
+    Hãy đảm bảo rằng câu trả lời của bạn:
+    
+    Chỉ tập trung vào nội dung câu hỏi, không bổ sung thông tin không liên quan.
+    Giữ độ chính xác cao, dựa trên nguyên tắc và lý thuyết của y học cổ truyền Việt Nam.
+    Trình bày một cách rõ ràng, mạch lạc và dễ hiểu, tránh những thuật ngữ chuyên môn quá phức tạp (trừ khi cần thiết).
+    Câu hỏi cần trả lời: {x["question"]}
     """
 
     start_time = time.time()
