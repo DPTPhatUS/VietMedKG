@@ -281,9 +281,9 @@ for i, x in enumerate(data[:10]):  # Limit to the first 20 samples
 
     Hãy đảm bảo rằng câu trả lời của bạn:
     
-    Chỉ tập trung vào nội dung câu hỏi, không bổ sung thông tin không liên quan.
-    Giữ độ chính xác cao, dựa trên nguyên tắc và lý thuyết của y học cổ truyền Việt Nam.
-    Trình bày một cách rõ ràng, mạch lạc và dễ hiểu, tránh những thuật ngữ chuyên môn quá phức tạp (trừ khi cần thiết).
+    - Chỉ tập trung vào nội dung câu hỏi, không bổ sung thông tin không liên quan.
+    - Giữ độ chính xác cao, dựa trên nguyên tắc và lý thuyết của y học cổ truyền Việt Nam.
+    - Trình bày một cách rõ ràng, mạch lạc và dễ hiểu, tránh những thuật ngữ chuyên môn quá phức tạp (trừ khi cần thiết).
     Câu hỏi cần trả lời: {x["question"]}
     """
 
