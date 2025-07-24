@@ -1,6 +1,6 @@
 # VietMedKG: Knowledge Graph and Benchmark for Traditional Vietnamese Medicine
 
-Paper published at ACM Transactions on Asian and Low-Resource Language Information Processing: https://doi.org/10.1145/3744740
+Paper published at ACM Transactions on Asian and Low-Resource Language Information Processing, Volume 24, Issue 7, Article No.: 69, Pages 1-17, DOI 10.1145/3744740: https://doi.org/10.1145/3744740
 
 Preprint: https://doi.org/10.1101/2024.08.07.606195
 
@@ -89,15 +89,19 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 author = {Trinh, Tam and Dao, Anh and Hy, Thi Hong Nhung and Hy, Truong Son},
 title = {VietMedKG: Knowledge Graph and Benchmark for Traditional Vietnamese Medicine},
 year = {2025},
+issue_date = {July 2025},
 publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
+volume = {24},
+number = {7},
 issn = {2375-4699},
 url = {https://doi.org/10.1145/3744740},
 doi = {10.1145/3744740},
-abstract = {Traditional Vietnamese Medicine (TVM) and Traditional Chinese Medicine (TCM) have shared significant similarities due to their geographical location, cultural exchanges, and hot and humid climatic conditions. However, unlike TCM, which has substantial works published to construct a knowledge graph, there is a notable absence of a comprehensive knowledge graph for TVM. This paper presents the first endeavor to build a knowledge graph for TVM based on extensive existing resources from TCM. We name our knowledge graph as VietMedKG. We propose a translation and filtration process to adapt TCM knowledge graphs to TVM, identifying the overlapping and unique elements of TVM. In addition, the constructed knowledge graph is then exploited further for developing a curated benchmark for the knowledge graph-based question-answering problem with the potential to support doctors and patients in assisting doctors and patients in identifying various diseases. Our work will not only bridge the gap between TCM and TVM but also set the foundation for future research into traditional Vietnamese medicine community. Our source code is publicly available at https://github.com/HySonLab/VietMedKG.},
-note = {Just Accepted},
+abstract = {Traditional Vietnamese Medicine (TVM) and Traditional Chinese Medicine (TCM) have shared significant similarities due to their geographical location, cultural exchanges, and hot and humid climatic conditions. However, unlike TCM, which has substantial works published to construct a knowledge graph, there is a notable absence of a comprehensive knowledge graph for TVM. This article presents the first endeavor to build a knowledge graph for TVM based on extensive existing resources from TCM. We name our knowledge graph as VietMedKG. We propose a translation and filtration process to adapt TCM knowledge graphs to TVM, identifying the overlapping and unique elements of TVM. In addition, the constructed knowledge graph is then exploited further for developing a curated benchmark for the knowledge graph-based question-answering problem with the potential to support doctors and patients in assisting doctors and patients in identifying various diseases. Our work will not only bridge the gap between TCM and TVM but also set the foundation for future research into TVM community. Our source code is publicly available at .},
 journal = {ACM Trans. Asian Low-Resour. Lang. Inf. Process.},
-month = jun,
-keywords = {Knowledge Graph, Traditional Vietnamese Mecidine, Graph-Based Question Answering, Retrieval Augmented Generation.}
+month = jul,
+articleno = {69},
+numpages = {17},
+keywords = {Knowledge graph, traditional vietnamese mecidine, graph-based question answering, retrieval augmented generation}
 }
 ```
