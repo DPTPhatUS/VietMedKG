@@ -1,6 +1,7 @@
 from py2neo import Graph, Node, Relationship
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
 
 def uppercase_first_letter(text):
     if isinstance(text, str):
@@ -40,7 +41,7 @@ def process_row(row):
     check_method = row['check_method']
     nutrition_do_eat = row['nutrition_do_eat']
     nutrition_not_eat = row['nutrition_not_eat']
-    nutrition_recommend_meal = row['nutrition_recommend_eat']
+    nutrition_recommend_meal = row['nutrition_recommend_meal']
     drug_recommend = row['drug_recommend']
     drug_common = row['drug_common']
     drug_detail = row['drug_detail']
@@ -123,15 +124,17 @@ def process_row(row):
             print(f"Error processing associated disease: {e}")
 
 if __name__ == "__main__": 
-    graph = Graph("bolt://54.237.191.131:7687", auth=("neo4j", "curvature-signals-flashlight"))
+    graph = Graph("bolt://localhost:7687", name="neo4j", auth=("neo4j", "Tuanphat@123456798"))
     clear_graph()
-    df_cn = pd.read_csv(r'.\data\data_translated.csv', encoding="utf-8")
-    num_workers = 4
-    # Process each row in parallel using ThreadPoolExecutor
-    with ThreadPoolExecutor(max_workers=num_workers) as executor:
-        futures = [executor.submit(process_row, row) for index, row in df_cn.iterrows()]
-        for future in as_completed(futures):
-            try:
-                future.result()  # Retrieve and handle exceptions if any
-            except Exception as e:
-                print(f"Error processing row: {e}")
+    df_cn = pd.read_csv(r'./data/data_translated.csv', encoding="utf-8")
+    for _, row in tqdm(df_cn.iterrows()):
+        process_row(row)
+    # num_workers = 4
+    # # Process each row in parallel using ThreadPoolExecutor
+    # with ThreadPoolExecutor(max_workers=num_workers) as executor:
+    #     futures = [executor.submit(process_row, row) for index, row in df_cn.iterrows()]
+    #     for future in as_completed(futures):
+    #         try:
+    #             future.result()  # Retrieve and handle exceptions if any
+    #         except Exception as e:
+    #             print(f"Error processing row: {e}")
