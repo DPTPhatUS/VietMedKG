@@ -124,7 +124,7 @@ def process_row(row):
             print(f"Error processing associated disease: {e}")
 
 if __name__ == "__main__": 
-    graph = Graph("bolt://localhost:7687", name="neo4j", auth=("neo4j", "Tuanphat@123456798"))
+    graph = Graph("bolt://localhost:7687", name="neo4j", auth=("neo4j", "some-password"))
     clear_graph()
     df_cn = pd.read_csv(r'./data/data_translated.csv', encoding="utf-8")
     for _, row in tqdm(df_cn.iterrows()):
